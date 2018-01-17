@@ -64,6 +64,23 @@ ubuntu      ALL=(ALL) NOPASSWD:ALL
 
 Then, save the file and quit the editor.
 
+In addition, if you got the message : 
+
+```sudo : unable to resolve host myhostname```
+
+Then,
+
+```console
+ifconfig # to get the IP machine
+nano /etc/hostnames # to catch the myhostname
+sudo -e /etc/hosts 
+```
+And insert the following:
+
+```
+IP myhostname
+```
+
 ## Section 1 - User, directories, and files
 
 **Part 1 - Create a Galaxy user**
@@ -178,4 +195,17 @@ The `-H` option is used to properly set the HOME environment variable.
 
 You should now see the Galaxy Python requirements being downloaded to the virtualenv `/srv/galaxy/venv`.
 
-As before, Galaxy should then be accessible at [http://localhost:8080](http://localhost:8080)
+Galaxy should then be accessible at [http://localhost:8080](http://localhost:8080)
+
+If you got the message:
+```console
+./scripts/common_startup.sh: 83: ./scripts/common_startup.sh: python: not found
+```
+
+Ensure that python is installed with 
+```
+python --version
+```
+otherwise installed it.
+
+
