@@ -166,7 +166,7 @@ Your Galaxy server should now be visible at `http://<your_ip>/` (if you receive 
 
 nginx can be configured to serve the static content (such as Javascript and CSS), which reduces load on the Galaxy server process. It can also compress and instruct clients to cache these assets, which improves page load times.
 
-nginx on Ubuntu 16.04 enables gzip compression by default, but it needs some additional tuning to compress *all* compressable Galaxy elements. We now create a file, `conf.d/galaxy.conf` with the following contents to address this:
+nginx on Ubuntu 16.04 enables gzip compression by default, but it needs some additional tuning to compress *all* compressable Galaxy elements. We now create a file, `conf.d/galaxy.conf` (e.g. with `sudo -e conf.d/galaxy.conf`) with the following contents to address this:
 
 ```nginx
 gzip_vary on;
