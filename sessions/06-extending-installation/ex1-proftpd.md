@@ -156,7 +156,7 @@ SQLNamedQuery                   LookupGalaxyUser SELECT "email, (CASE WHEN subst
 SQLNamedQuery                   GetUserSalt SELECT "(CASE WHEN SUBSTRING (password from 1 for 6) = 'PBKDF2' THEN SUBSTRING (password from 21 for 16) END) AS salt FROM galaxy_user WHERE email='%U'"
 ```
 
-If your UID and GID were not 999, be sure to update the `SQLNamedQuery LookupGalaxyUser` accordingly. Thne, save and quit your editor.
+If your UID and GID were not 999, be sure to update the `SQLNamedQuery LookupGalaxyUser` accordingly. Then, save and quit your editor.
 
 Finally, restart ProFTPD:
 
