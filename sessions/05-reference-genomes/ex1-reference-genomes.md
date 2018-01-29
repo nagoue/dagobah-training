@@ -282,7 +282,7 @@ It it typically better to place these files under a directory external to the Ga
   the *tool-data/bwa_mem_index.loc* file. Remember to use TABs (*:set noexpandtab* in vim).
 
   ```
-  sacCer1     sacCer1 S. cerevisiae Oct. 2003 (SGD/sacCer1) (sacCer1) /srv/galaxy/server/tool-data/sacCer1/bwa_index/sacCer1/sacCer1.fa
+  sacCer1     sacCer1 S. cerevisiae Oct. 2003 (SGD/sacCer1) (sacCer1) /srv/galaxy/server/tool-data/sacCer1/bwa_index/sacCer1.fa
   ```
 * Now, all that's left to do is add the `bwa_mem_index` data table to the tool data table config file. Make a copy from the sample and add the new table to the bottom:
 
